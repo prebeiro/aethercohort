@@ -1,0 +1,59 @@
+/* css styles */
+
+/* Headers color*/
+h1, h2, h3, h4, h5, h6 {
+  color: #2C3E50;
+}
+
+
+:root{
+  --site-content-max: 1100px;
+  --site-content-pad: 24px;
+
+  /* Quarto themes typically pad the main content; we neutralize that for bands */
+  --fullbleed-pad: 1.5rem; /* fallback */
+}
+
+/* Full-bleed band that escapes the content column */
+.fullband{
+  background: #2f4254;
+  color: #ffffff;
+  padding: 48px 0;
+
+  /* Break out of Quarto's content padding/column */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* Inner aligned column */
+.fullband__inner{
+  max-width: var(--site-content-max);
+  margin: 0 auto;
+  padding: 0 var(--site-content-pad);
+  box-sizing: border-box;
+}
+
+/* Typography */
+.fullband h3{
+  margin: 0 0 14px 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+.fullband p,
+.fullband li{
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Link styling inside band */
+.fullband a{
+  color: #cccccc;
+  font-style: italic;
+}
+
+/* Prevent accidental horizontal scrollbars if any child overflows */
+html, body{
+  overflow-x: clip;
+}
+
+
