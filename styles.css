@@ -56,4 +56,7 @@ html, body{
   overflow-x: clip;
 }
 
-
+/* Navbar bottom shadow */
+.navbar {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
