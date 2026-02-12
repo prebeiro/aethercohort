@@ -62,5 +62,8 @@ html, body{
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
 }
 
-
+/* Hide text next to the logo in the navbar, but keep the logo itself */
+.navbar-brand .navbar-title {
+  display: none;
+}
 
