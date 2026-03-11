@@ -65,6 +65,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N1BP9BQ2L6"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-N1BP9BQ2L6', { 'anonymize_ip': true});
+</script>
 <meta name="robots" content="noindex">
 
 
@@ -103,10 +112,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./team.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./explore.html" aria-current="page"> 
-<span class="menu-text">Explore</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explore" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Explore</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explore">    
+        <li>
+    <a class="dropdown-item" href="./explore.html">
+ <span class="dropdown-text">The Data</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./goingthedistance.html">
+ <span class="dropdown-text">Going the Distance</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -148,8 +168,60 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<img src="images/under_construction.png" style="display:block; margin-left:auto; margin-right:auto; width:65%; text-align: center;">
+<img src="images/under_construction.png" style="display:block; margin-left:auto; margin-right:auto; width:40%; text-align: center;">
 
+<!--
+<style>
+  /* Let the content go full width */
+  main.content {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .quarto-title-block {
+    margin: 0 !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* The iframe itself */
+  #dashFrame {
+    width: 100%;
+    border: 0;
+    display: block;
+    /* no fixed height here – the child will tell us */
+  }
+</style>
+
+<iframe
+  id="dashFrame"
+  src="aether_dashboard.html"
+  title="AETHER Dashboard"
+  loading="eager">
+</iframe>
+
+<script>
+  // Only cache-bust when hosted (not local file preview)
+  (function () {
+    var iframe = document.getElementById("dashFrame");
+    if (!iframe) return;
+
+    var isLocal = location.protocol === "file:" || location.hostname === "127.0.0.1" || location.hostname === "localhost";
+    if (isLocal) return;
+
+    iframe.src = "aether_dashboard.html?v=" + Date.now();
+  })();
+  
+  // Listen for height messages from the embedded dashboard
+  window.addEventListener("message", function (event) {
+    if (!event.data || event.data.type !== "aether-dashboard-height") return;
+
+    var iframe = document.getElementById("dashFrame");
+    if (!iframe) return;
+
+    iframe.style.height = event.data.height + "px";
+  });
+</script>
+-->
 
 
 

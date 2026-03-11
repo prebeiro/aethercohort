@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Team – ÆTHER Cohort</title>
+<title>Going the Distance – ÆTHER Cohort</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ gtag('config', 'G-N1BP9BQ2L6', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed iframe-page fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -109,7 +109,7 @@ gtag('config', 'G-N1BP9BQ2L6', { 'anonymize_ip': true});
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./team.html" aria-current="page"> 
+    <a class="nav-link" href="./team.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -141,195 +141,91 @@ gtag('config', 'G-N1BP9BQ2L6', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Meet the Team</h1>
-</div>
 
 
 
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
+<img src="images/under_construction.png" style="display:block; margin-left:auto; margin-right:auto; width:40%; text-align: center;">
 
-
-
+<!-- 
 <style>
-.team-section {
-  margin-top: 40px;
-  width: 100%;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.team-title {
-  font-weight: 700;
-  margin-bottom: 40px;
-  text-align: center;
+body.iframe-page {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  overflow: hidden;
 }
 
-/* Responsive 3-column grid (collapses automatically) */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
-  gap: 36px 24px;
-  justify-items: center;
-  align-items: start;
-  text-align: center;
+main.content {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 100dvh;
+  overflow: hidden;
 }
 
-/* 2 columns on medium screens, 1 column on small screens */
-@media (max-width: 900px) {
-  .team-grid {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-  }
-}
-@media (max-width: 600px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
+.iframe-page-wrap {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
-/* Card-ish wrapper */
-.team-member {
-  max-width: 320px;
-}
-
-.team-photo {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 9999px;
+.iframe-page-wrap iframe {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: calc(100dvh - var(--nav-h, 0px) - 25px);
+  border: none;
 }
 
-.team-name {
-  margin-top: 15px;
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-
-.team-cred {
-  font-weight: 400;
-}
-
-.team-role {
-  margin-top: 6px;
+.nav-footer {
+  display: none !important;
 }
 </style>
 
-<div class="team-section">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const root = document.documentElement;
+  const nav = document.querySelector(".navbar");
+  const iframe = document.querySelector(".iframe-page-wrap iframe");
 
-  <div class="team-grid">
+  function setMapHeight() {
+    const navH = nav ? Math.ceil(nav.getBoundingClientRect().height) : 0;
+    root.style.setProperty("--nav-h", `${navH}px`);
 
-    <!-- Peter -->
-    <div class="team-member">
-      <img src="images/team/peter_rebeiro_square.jpg" class="rounded-image team-photo" alt="Peter Rebeiro">
-      <div class="team-name">Peter Rebeiro <span class="team-cred">PhD, MHS</span></div>
-      <p class="team-role">Principal Investigator<br>Associate Professor of Medicine, Biostatistics, and Biomedical Informatics</p>
-    </div>
+    if (iframe) {
+      iframe.style.height = `calc(100dvh - ${navH}px - 25px)`;
+    }
+  }
 
-    <!-- Amber -->
-    <div class="team-member">
-      <img src="images/team/amber_hackstadt_square.jpg" class="rounded-image team-photo" alt="Amber Hackstadt">
-      <div class="team-name">Amber Hackstadt <span class="team-cred">PhD</span></div>
-      <p class="team-role">Assistant Professor of Biostatistics</p>
-    </div>
+  setMapHeight();
+  window.addEventListener("resize", setMapHeight);
+});
+</script>
 
-    <!-- Shawn -->
-    <div class="team-member">
-      <img src="images/team/shawn_garbett_square.jpg" class="rounded-image team-photo" alt="Shawn Garbett">
-      <div class="team-name">Shawn Garbett <span class="team-cred">MS</span></div>
-      <p class="team-role">Assistant in Biostatistics</p>
-    </div>
-
-    <!-- Elisa -->
-    <div class="team-member">
-      <img src="images/team/elisa_yazdani_square.jpg" class="rounded-image team-photo" alt="Elisa Yazdani">
-      <div class="team-name">Elisa Yazdani <span class="team-cred">MS</span></div>
-      <p class="team-role">Biostatistician</p>
-    </div>
-
-    <!-- Danielle -->
-    <div class="team-member">
-      <img src="images/team/danielle_neal_square.jpg" class="rounded-image team-photo" alt="Danielle Neal">
-      <div class="team-name">Danielle Neal <span class="team-cred">MPH</span></div>
-      <p class="team-role">Program Manager</p>
-    </div>
-
-    <!-- Alicia -->
-    <div class="team-member">
-      <img src="images/team/alicia_rector_square.jpg" class="rounded-image team-photo" alt="Alicia Rector">
-      <div class="team-name">Alicia Rector <span class="team-cred">BS</span></div>
-      <p class="team-role">Associate Research Analyst</p>
-    </div>
-
-    <!-- Jesse -->
-    <div class="team-member">
-      <img src="images/team/jesse_carlson_square.jpg" class="rounded-image team-photo" alt="Jesse Carlson">
-      <div class="team-name">Jesse Carlson <span class="team-cred">MPH</span></div>
-      <p class="team-role">Research Assistant &amp;<br>Epidemiology Doctoral Student</p>
-    </div>
-
-    <!-- Justin -->
-    <div class="team-member">
-      <img src="images/team/justin_amarin_square.jpg" class="rounded-image team-photo" alt="Justin Amarin">
-      <div class="team-name">Justin Amarin <span class="team-cred">MD</span></div>
-      <p class="team-role">Clinical Research Coordinator III &amp;<br>Epidemiology Doctoral Student</p>
-    </div>
-
-    <!-- Ahra -->
-    <div class="team-member">
-      <img src="images/team/ahra_kim_square.jpg" class="rounded-image team-photo" alt="Ahra Kim">
-      <div class="team-name">Ahra Kim <span class="team-cred">MPH</span></div>
-      <p class="team-role">Health Policy Doctoral Candidate</p>
-    </div>
-
-    <!-- Creea -->
-    <div class="team-member">
-      <img src="images/team/creea_shannon_square.jpg" class="rounded-image team-photo" alt="Creea Shannon">
-      <div class="team-name">Creea Shannon <span class="team-cred">MS, MSDS</span></div>
-      <p class="team-role">Biomedical Informatics Doctoral Student</p>
-    </div>
-
-    <!-- April -->
-    <div class="team-member">
-      <img src="images/team/april_pettit_square.jpg" class="rounded-image team-photo" alt="April Pettit">
-      <div class="team-name">April Pettit <span class="team-cred">MD, MPH</span></div>
-      <p class="team-role">Professor of Medicine</p>
-    </div>
-
-    <!-- Christian -->
-    <div class="team-member">
-      <img src="images/team/christian_chandler_square.jpg" class="rounded-image team-photo" alt="Cristian Chandler">
-      <div class="team-name">Cristian Chandler <span class="team-cred">MD, MPH</span></div>
-      <p class="team-role">Assistant Professor of Medicine</p>
-    </div>
-
-
-  </div>
+<div class="iframe-page-wrap">
+  <iframe
+    src="goingthedistance_map.html"
+    loading="eager"
+    scrolling="no"
+    title="Interactive Tennessee HIV testing access map">
+  </iframe>
 </div>
+-->
 
 
 
 
-
-
-
-</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
