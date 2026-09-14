@@ -167,10 +167,6 @@ gtag('config', 'G-N1BP9BQ2L6', { 'anonymize_ip': true});
 </header>
 
 
-
-<img src="images/under_construction.png" style="display:block; margin-left:auto; margin-right:auto; width:40%; text-align: center;">
-
-<!--
 <style>
   /* Let the content go full width */
   main.content {
@@ -188,15 +184,11 @@ gtag('config', 'G-N1BP9BQ2L6', { 'anonymize_ip': true});
     width: 100%;
     border: 0;
     display: block;
-    /* no fixed height here – the child will tell us */
+    height: 1900px;
   }
 </style>
 
-<iframe
-  id="dashFrame"
-  src="aether_dashboard.html"
-  title="AETHER Dashboard"
-  loading="eager">
+<iframe id="dashFrame" src="aether_dashboard.html" title="AETHER Dashboard" loading="eager" scrolling="no">
 </iframe>
 
 <script>
@@ -210,18 +202,8 @@ gtag('config', 'G-N1BP9BQ2L6', { 'anonymize_ip': true});
 
     iframe.src = "aether_dashboard.html?v=" + Date.now();
   })();
-  
-  // Listen for height messages from the embedded dashboard
-  window.addEventListener("message", function (event) {
-    if (!event.data || event.data.type !== "aether-dashboard-height") return;
-
-    var iframe = document.getElementById("dashFrame");
-    if (!iframe) return;
-
-    iframe.style.height = event.data.height + "px";
-  });
 </script>
--->
+
 
 
 
